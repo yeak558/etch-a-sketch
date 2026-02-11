@@ -4,6 +4,27 @@
 	padding: 0;
 }
 
+
+/* Menu */
+.menu {
+	padding: 30px;
+	background-color: #f5e7c6;
+	display: flex;
+}
+
+#pixel-number-button {
+	background-color: #fa8112;
+	padding: 10px;
+	border: 2px solid #b45e0d;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+
+/* Canvas */
 .grid-container {
 	display: flex;
 	flex-wrap: wrap;
