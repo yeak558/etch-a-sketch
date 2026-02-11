@@ -2,13 +2,16 @@
 const gridContainer = document.querySelector(".grid-container");
 const pixelNumberButton = document.querySelector("#pixel-number-button");
 
+// General variables
+let defaultPixelNumber = "64"
 
 pixelNumberButton.addEventListener("click", drawCanvas);
+
 
 function drawCanvas() {
 	let pixelNumber;
 	do {
-		pixelNumber = Number(prompt("Which width-height do you want?", "64"));
+		pixelNumber = Number(prompt("Which width-height do you want?", defaultPixelNumber));
 		if (pixelNumber > 100) {
 			alert("Please enter a positive value less than or equal to 100");
 		}
@@ -19,4 +22,5 @@ function drawCanvas() {
 		grid.classList.add("grid");
 		gridContainer.appendChild(grid);
 	}
+	defaultPixelNumber = String(pixelNumber);
 }
