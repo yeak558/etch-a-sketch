@@ -14,3 +14,7 @@
 	width: 16px;
 	height: 16px;
 }
+
+.grid:hover {
+	background-color: rgb(150, 149, 149);
+}
