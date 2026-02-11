@@ -1,0 +1,16 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.grid-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.grid {
+	border: 1px solid rgba(151, 151, 151, 0.686);
+	width: 16px;
+	height: 16px;
+}
