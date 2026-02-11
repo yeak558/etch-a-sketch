@@ -4,12 +4,22 @@
 	padding: 0;
 }
 
+body {
+	background-color: #fff9ea;
+	display: flex;
+	flex-direction: column;
+}
 
 /* Menu */
 .menu {
 	padding: 30px;
 	background-color: #f5e7c6;
+	margin-bottom: 40px;
+	/* Layout */
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
 }
 
 #pixel-number-button {
@@ -23,9 +33,9 @@
 }
 
 
-
 /* Canvas */
 .grid-container {
+	align-self: center;
 	display: flex;
 	flex-wrap: wrap;
 }
