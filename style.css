@@ -35,6 +35,7 @@ body {
 
 /* Canvas */
 .grid-container {
+	margin-bottom: 40px;
 	align-self: center;
 	display: flex;
 	flex-wrap: wrap;

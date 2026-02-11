@@ -7,8 +7,20 @@ const canvasInfo = document.querySelector("#canvas-info");
 let defaultPixelNumber = 64;
 const pixelSize = 16;
 
+initCanvas();
 pixelNumberButton.addEventListener("click", drawCanvas);
 
+function initCanvas() {
+	gridContainer.style.width = `${pixelSize * 64}px`;
+	gridContainer.style.height = `${pixelSize * 64}px`;
+	canvasInfo.textContent = "Canvas size: 64x64";
+	let totalGrid = 64**2;
+	for (let i = 1; i <= totalGrid; i++) {
+		let grid = document.createElement("div");
+		grid.classList.add("grid");
+		gridContainer.appendChild(grid);
+	}
+}
 
 function drawCanvas() {
 	cleanCanvas();
@@ -35,5 +47,3 @@ function drawCanvas() {
 function cleanCanvas() {
 	gridContainer.innerHTML = "";
 }
-
-// It adds the new grids, it should redraw, fix it
