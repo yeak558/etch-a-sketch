@@ -11,6 +11,7 @@ pixelNumberButton.addEventListener("click", drawCanvas);
 
 
 function drawCanvas() {
+	cleanCanvas();
 	let pixelNumber;
 	do {
 		pixelNumber = Number(prompt("Which width-height do you want?", String(defaultPixelNumber)));
@@ -22,12 +23,17 @@ function drawCanvas() {
 	gridContainer.style.width = `${pixelSize * pixelNumber}px`;
 	gridContainer.style.height = `${pixelSize * pixelNumber}px`;
 	canvasInfo.textContent = `Canvas size: ${pixelNumber}x${pixelNumber}`;
-	for (let i = 1; i <= pixelNumber**2; i++) {
+	let totalGrid = pixelNumber**2;
+	for (let i = 1; i <= totalGrid; i++) {
 		let grid = document.createElement("div");
 		grid.classList.add("grid");
 		gridContainer.appendChild(grid);
 	}
 	defaultPixelNumber = pixelNumber;
+}
+
+function cleanCanvas() {
+	gridContainer.innerHTML = "";
 }
 
 // It adds the new grids, it should redraw, fix it
