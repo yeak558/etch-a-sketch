@@ -36,20 +36,26 @@ body {
 /* Canvas */
 .grid-container {
 	margin-bottom: 40px;
-	width: 1024px;
-	height: 1024px;
+	border: 1px solid rgba(151, 151, 151, 0.686);
+	width: 640px;
+	height: 640px;
 	align-self: center;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0;
 }
 
-.grid {
+.grid-line {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.square {
 	border: 1px solid rgba(151, 151, 151, 0.686);
 	width: 16px;
 	height: 16px;
 }
 
-.grid:hover {
+.square:hover {
 	background-color: rgb(150, 149, 149);
 }

@@ -5,7 +5,7 @@ const canvasInfo = document.querySelector("#canvas-info");
 
 // General variables
 let defaultPixelNumber = 64;
-const pixelSize = 16;
+let pixelSize = 16;
 
 initCanvas();
 pixelNumberButton.addEventListener("click", drawCanvas);
@@ -32,14 +32,19 @@ function drawCanvas() {
 		}
 	} while (pixelNumber <= 0 || pixelNumber > 100)
 
-	gridContainer.style.width = `${pixelSize * pixelNumber}px`;
-	gridContainer.style.height = `${pixelSize * pixelNumber}px`;
+	// gridContainer.style.width = `${pixelSize * pixelNumber}px`;
+	// gridContainer.style.height = `${pixelSize * pixelNumber}px`;
+	
 	canvasInfo.textContent = `Canvas size: ${pixelNumber}x${pixelNumber}`;
-	let totalGrid = pixelNumber**2;
-	for (let i = 1; i <= totalGrid; i++) {
-		let grid = document.createElement("div");
-		grid.classList.add("grid");
-		gridContainer.appendChild(grid);
+	for (let i = 1; i <= pixelNumber; i++) {
+		let gridLine = document.createElement("div");
+		gridLine.classList.add("grid-line");
+		for (let j = 1; j <= pixelNumber; j++) {
+			let square = document.createElement("div");
+			square.classList.add("square");
+			gridLine.appendChild(square);
+		}
+		gridContainer.appendChild(gridLine);
 	}
 	defaultPixelNumber = pixelNumber;
 }
