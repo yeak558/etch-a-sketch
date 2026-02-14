@@ -7,8 +7,7 @@ const canvasInfo = document.querySelector("#canvas-info");
 // General variables
 let defaultPixelNumber = 64;
 let pixelSize; // will be decided according to pixel number
-const width = 640;
-const height = 640;
+const canvasLength = 640;
 
 
 initCanvas();
@@ -21,8 +20,8 @@ function initCanvas() {
 		gridLine.classList.add("grid-line");
 		for (let j = 1; j <= 64; j++) {
 			let pixel = document.createElement("div");
-			pixel.style.width = `${width / 64}px`;
-			pixel.style.height = `${height / 64}px`;
+			pixel.style.width = `${canvasLength / 64}px`;
+			pixel.style.height = `${canvasLength / 64}px`;
 			pixel.classList.add("pixel");
 			gridLine.appendChild(pixel);
 		}
@@ -40,13 +39,15 @@ function drawCanvas() {
 		}
 	} while (pixelNumber <= 0 || pixelNumber > 100)
 	canvasInfo.textContent = `Canvas size: ${pixelNumber}x${pixelNumber}`;
-	for (let i = 1; i <= pixelNumber; i++) {
+	for (let i = 1; i <= pixelNumber; i++ ) {
 		let gridLine = document.createElement("div");
 		gridLine.classList.add("grid-line");
 		for (let j = 1; j <= pixelNumber; j++) {
-			let square = document.createElement("div");
-			square.classList.add("square");
-			gridLine.appendChild(square);
+			let pixel = document.createElement("div");
+			pixel.style.width = `${canvasLength / pixelNumber}px`;
+			pixel.style.height = `${canvasLength / pixelNumber}px`;
+			pixel.classList.add("pixel");
+			gridLine.appendChild(pixel);
 		}
 		gridContainer.appendChild(gridLine);
 	}
