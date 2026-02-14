@@ -37,16 +37,22 @@ body {
 .grid-container {
 	margin-bottom: 40px;
 	border: 1px solid rgba(151, 151, 151, 0.686);
+	width: 640px;
+	height: 640px;
 	align-self: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .grid-line {
 	display: flex;
 	flex-wrap: wrap;
+	flex: 1;
 }
 
 .pixel {
 	border: 1px solid rgba(151, 151, 151, 0.686);
+	flex: 1;
 }
 
 .pixel:hover {

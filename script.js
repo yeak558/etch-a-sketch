@@ -20,8 +20,6 @@ function initCanvas() {
 		gridLine.classList.add("grid-line");
 		for (let j = 1; j <= 64; j++) {
 			let pixel = document.createElement("div");
-			pixel.style.width = `${canvasLength / 64}px`;
-			pixel.style.height = `${canvasLength / 64}px`;
 			pixel.classList.add("pixel");
 			gridLine.appendChild(pixel);
 		}
@@ -44,8 +42,6 @@ function drawCanvas() {
 		gridLine.classList.add("grid-line");
 		for (let j = 1; j <= pixelNumber; j++) {
 			let pixel = document.createElement("div");
-			pixel.style.width = `${canvasLength / pixelNumber}px`;
-			pixel.style.height = `${canvasLength / pixelNumber}px`;
 			pixel.classList.add("pixel");
 			gridLine.appendChild(pixel);
 		}
