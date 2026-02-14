@@ -37,12 +37,7 @@ body {
 .grid-container {
 	margin-bottom: 40px;
 	border: 1px solid rgba(151, 151, 151, 0.686);
-	width: 642px;
-	height: 642px;
 	align-self: center;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0;
 }
 
 .grid-line {
