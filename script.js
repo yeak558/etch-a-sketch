@@ -12,7 +12,7 @@ initCanvas();
 pixelNumberButton.addEventListener("click", drawCanvas);
 
 function initCanvas() {
-	canvasInfo.textContent = "Canvas size: 64x64";
+	canvasInfo.textContent = "Canvas pixel number: 64x64";
 	putPixels(defaultPixelNumber);
 }
 
